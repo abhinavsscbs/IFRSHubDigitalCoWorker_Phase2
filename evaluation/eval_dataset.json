@@ -1,0 +1,18 @@
+{
+  "description": "Source-checked starter evaluation for the user-supplied IFRS 15 question. The supplied bot response is actual_output, not the reference. All five configured indexes are targeted separately. Reference requires accounting expert sign-off before benchmark use; see ifrs15_principal_agent_dataset.md.",
+  "cases": [
+    {
+      "id": "ifrs15-pa-001-original-query",
+      "question": "When an entity is considered as a principal under IFRS15?",
+      "expected_output": "An entity is a principal when it controls the specified good or service before customer transfer. Identify each specified good or service first. Fulfilment responsibility, inventory risk and pricing discretion are supporting indicators, not mandatory conditions or substitutes for control. A principal reports the revenue gross. Apply IFRS 15 B34–B37A.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ],
+      "actual_output": "**Conclusion:**  \nAn entity is considered a principal under IFRS 15 when it controls the specified goods or services before transferring them to the customer. This determination is based on evaluating whether the entity has primary responsibility for fulfilling the promise to provide the goods or services, bears inventory risk, and has discretion in setting prices.\n\n**Introduction:**  \nIFRS 15 provides guidance on distinguishing between principal and agent roles in revenue recognition. The key principle is control over the specified goods or services. This analysis involves assessing indicators such as inventory risk, price-setting discretion, and the nature of the entity's involvement in the transaction.\n\n**Key Considerations for Principal Determination:**  \n– **Control of Specified Goods/Services:** The entity must control the goods or services before they are transferred to the customer. This is the overarching principle.  \n– **Inventory Risk:** The entity bears inventory risk if it commits to obtaining goods/services before securing a customer contract.  \n– **Price-Setting Discretion:** The entity establishes the price the customer pays, indicating control over the transaction.  \n– **Performance Obligation:** The entity has the primary responsibility to fulfill the promise to provide the goods/services.  \n\n**Illustrative Examples:**  \n– **Example 46A:** An entity promises to provide specialized equipment. It controls the equipment before transfer, bears inventory risk, and sets the price, thus acting as a principal.  \n– **Example 47:** An entity provides office maintenance services. Despite mitigating inventory risk, it controls the services before provision, qualifying as a principal.  \n– **Example 48A:** An entity acts as both principal and agent in a single contract. For recruitment services performed in-house, it is a principal; for third-party database access, it is an agent.  \n\n**Additional Guidance:**  \n– The flow of consideration (gross vs. net) is not determinative in the principal vs. agent analysis.  \n– IFRS 10 provides supplementary conditions for decision-makers, but these are not sufficient on their own to conclude agency.  \n\n**Summary:**  \nThe principal determination under IFRS 15 hinges on control, inventory risk, and price-setting authority. Entities must carefully evaluate these factors to ensure accurate revenue recognition."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+app:
+  name: IFRS Digital Co-worker
+server:
+  host: 0.0.0.0
+  port: 3000
+  debug: false
+cors:
+  enabled: true
+  origins: [http://localhost:5173, http://127.0.0.1:5173]
+session:
+  provider: file
+  redis:
+    url: '${REDIS_URL:redis://localhost:6379/0}'
+    key_prefix: 'ifrs:history:'
+  file:
+    dir: backend/chat_history
+llm:
+  provider: openai
+  api_key: '${OPENAI_API_KEY}'
+  timeout_sec: 600
+  max_retries: 2
+  models:
+    full: gpt-6.1-sol
+    mini: gpt-6-luna
+    extractor: gpt-6-luna
+    relevance: gpt-6-luna
+  max_tokens:
+    full: 128000
+    mini: 8192
+    extractor: 8192
+    relevance: 1024
+  reasoning_effort:
+    full: medium
+    mini: low
+    extractor: low
+    relevance: low
+rag:
+  seed: 42
+  embedder:
+    model_name: text-embedding-3-small
+    dimensions: 1536
+  thresholds:
+    stage_1: 0.0
+    stage_2_percentile: 0.3
+  # llm preserves the existing relevance gate; retrieval removes the five
+  # per-index LLM gates. Validate with DeepEval before using it in production.
+  relevance_mode: llm
+  relevance_workers: 5
+  exceptions_enabled: true
+  # Enable only for your own trusted local LangChain pickle files.
+  trust_local_indexes: true
+  db_paths:
+    - {name: IFRS A, path: IFRSAKnowledgeBase/IFRSA, score_threshold: 0.0}
+    - {name: IFRS B, path: IFRSBKnowledgeBase/IFRSB, score_threshold: 0.0}
+    - {name: IFRS C, path: IFRSCKnowledgeBase/IFRSC, score_threshold: 0.0}
+    - {name: EY, path: EYKnowledgeBase/EY, score_threshold: 0.0}
+    - {name: PwC, path: PwCKnowledgeBase/PwC, score_threshold: 0.0}
+  replace_excel_path: Replacement_data.xlsx
+evaluation:
+  judge_task: mini
+  threshold: 0.7
+  max_concurrent_metrics: 3
+  dataset: evaluation/eval_dataset.json

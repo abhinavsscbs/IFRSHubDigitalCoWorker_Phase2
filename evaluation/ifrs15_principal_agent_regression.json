@@ -1,0 +1,198 @@
+{
+  "description": "Expanded source-checked starter regression set: 16 questions, each targeting IFRS A/B/C, EY and PwC. Corpus coverage is diagnostic; examples or consolidation distinctions may be absent from a specialised index. Only the original query has a real supplied actual_output. Expert sign-off pending; see ifrs15_principal_agent_dataset.md.",
+  "cases": [
+    {
+      "id": "ifrs15-pa-001-original-query",
+      "question": "When an entity is considered as a principal under IFRS15?",
+      "expected_output": "An entity is a principal when it controls the specified good or service before customer transfer. Identify each specified good or service first. Fulfilment responsibility, inventory risk and pricing discretion are supporting indicators, not mandatory conditions or substitutes for control. A principal reports the revenue gross. Apply IFRS 15 B34–B37A.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ],
+      "actual_output": "**Conclusion:**  \nAn entity is considered a principal under IFRS 15 when it controls the specified goods or services before transferring them to the customer. This determination is based on evaluating whether the entity has primary responsibility for fulfilling the promise to provide the goods or services, bears inventory risk, and has discretion in setting prices.\n\n**Introduction:**  \nIFRS 15 provides guidance on distinguishing between principal and agent roles in revenue recognition. The key principle is control over the specified goods or services. This analysis involves assessing indicators such as inventory risk, price-setting discretion, and the nature of the entity's involvement in the transaction.\n\n**Key Considerations for Principal Determination:**  \n– **Control of Specified Goods/Services:** The entity must control the goods or services before they are transferred to the customer. This is the overarching principle.  \n– **Inventory Risk:** The entity bears inventory risk if it commits to obtaining goods/services before securing a customer contract.  \n– **Price-Setting Discretion:** The entity establishes the price the customer pays, indicating control over the transaction.  \n– **Performance Obligation:** The entity has the primary responsibility to fulfill the promise to provide the goods/services.  \n\n**Illustrative Examples:**  \n– **Example 46A:** An entity promises to provide specialized equipment. It controls the equipment before transfer, bears inventory risk, and sets the price, thus acting as a principal.  \n– **Example 47:** An entity provides office maintenance services. Despite mitigating inventory risk, it controls the services before provision, qualifying as a principal.  \n– **Example 48A:** An entity acts as both principal and agent in a single contract. For recruitment services performed in-house, it is a principal; for third-party database access, it is an agent.  \n\n**Additional Guidance:**  \n– The flow of consideration (gross vs. net) is not determinative in the principal vs. agent analysis.  \n– IFRS 10 provides supplementary conditions for decision-makers, but these are not sufficient on their own to conclude agency.  \n\n**Summary:**  \nThe principal determination under IFRS 15 hinges on control, inventory risk, and price-setting authority. Entities must carefully evaluate these factors to ensure accurate revenue recognition."
+    },
+    {
+      "id": "ifrs15-pa-002-specified-item",
+      "question": "What must an entity identify before assessing whether it is a principal or an agent under IFRS 15?",
+      "expected_output": "Identify each distinct promised good, service or bundle, then assess control of that specified item before customer transfer.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-003-indicators",
+      "question": "What are the principal-versus-agent indicators in paragraph B37 of IFRS 15?",
+      "expected_output": "The indicators are responsibility for fulfilling the promise, inventory exposure, and pricing discretion. They provide evidence about pre-transfer control.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-004-not-a-checklist",
+      "question": "Must all three IFRS 15 principal indicators be present for an entity to be a principal?",
+      "expected_output": "No. Indicators are contextual evidence, not a checklist. Their relevance and weight vary; they cannot override the control assessment.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-005-pricing-alone",
+      "question": "Does discretion in setting the selling price alone establish that an entity is a principal under IFRS 15?",
+      "expected_output": "No. Pricing freedom is only supporting evidence. Agents can also influence prices; determine whether the entity controls the specified item.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-006-inventory-risk",
+      "question": "Is inventory risk relevant only before delivery when assessing principal versus agent under IFRS 15?",
+      "expected_output": "No. Inventory exposure can arise before transfer or afterwards through returns. It supports, rather than determines, the control conclusion.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-007-momentary-title",
+      "question": "Does briefly holding legal title automatically make an entity a principal under IFRS 15?",
+      "expected_output": "No. Brief legal ownership alone does not establish control before customer transfer; examine the arrangement substantively.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-008-subcontracted-service",
+      "question": "Can an entity be a principal if a subcontractor performs the service for the customer?",
+      "expected_output": "Yes. Controlling a service right and directing its delivery on the entity’s behalf can establish principal status.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-009-gross-versus-net",
+      "question": "How does revenue presentation differ for a principal and an agent under IFRS 15?",
+      "expected_output": "The principal records its gross entitlement; the agent records its arranging fee or commission. Cash collection alone does not establish control.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-010-mixed-roles",
+      "question": "Can an entity be both a principal and an agent in the same IFRS 15 contract?",
+      "expected_output": "Yes. Assess each specified item separately; different items in one contract can lead to different principal-versus-agent conclusions.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-011-ifrs10-confusion",
+      "question": "Should IFRS 10 decision-maker agency criteria replace IFRS 15 principal-versus-agent guidance for revenue?",
+      "expected_output": "No. IFRS 10 concerns investee control for consolidation. Revenue classification follows IFRS 15’s specified-item control assessment, not investee decision-making criteria.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-012-example46a",
+      "question": "What does IFRS 15 Illustrative Example 46A concern, and why is the entity a principal?",
+      "expected_output": "Example 46A concerns office maintenance. The entity directs the outside provider to perform the agreed service on its behalf, controlling that service right; it is principal despite mitigating inventory exposure.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-013-example47",
+      "question": "What does IFRS 15 Illustrative Example 47 concern, and how can the entity be a principal?",
+      "expected_output": "Example 47 concerns airline tickets. The reseller controls the purchased flight rights before customer transfer, faces unsold-ticket exposure and chooses selling prices; it is principal for those rights.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-014-example48a",
+      "question": "How does IFRS 15 Illustrative Example 48A demonstrate principal and agent roles within one contract?",
+      "expected_output": "Example 48A distinguishes the entity’s own recruitment work from third-party database access. It is principal for recruitment and agent for arranging the database licence.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-015-example-number-check",
+      "question": "Is specialised equipment Example 46A and office maintenance Example 47 in the IFRS 15 principal-versus-agent illustrations?",
+      "expected_output": "No. Specialised equipment appears in Example 46; office maintenance in Example 46A; airline tickets in Example 47.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    },
+    {
+      "id": "ifrs15-pa-016-credit-risk",
+      "question": "Is customer credit risk one of the current IFRS 15 B37 principal indicators?",
+      "expected_output": "No. Credit exposure was removed from the indicators because it generally provides weak evidence of control; it cannot override stronger agency evidence.",
+      "indexes": [
+        "IFRS A",
+        "IFRS B",
+        "IFRS C",
+        "EY",
+        "PwC"
+      ]
+    }
+  ]
+}

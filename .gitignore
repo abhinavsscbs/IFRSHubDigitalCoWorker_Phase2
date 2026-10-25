@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+backend/chat_history/
+evaluation/reports/
+.deepeval/
+data/
+
+# Local corpus artifacts and source documents
+*.faiss
+*.pkl
+**/embedding_manifest.json
+/IFRSAKnowledgeBase/
+/IFRSBKnowledgeBase/
+/IFRSCKnowledgeBase/
+/EYKnowledgeBase/
+/PwCKnowledgeBase/
+*.docx
+*.pdf
+*.xlsx
+.DS_Store

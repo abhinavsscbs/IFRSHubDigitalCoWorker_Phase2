@@ -1,0 +1,10 @@
+{
+  "dataset": "evaluation/ifrs16_serviced_office_eval.json",
+  "dataset_sha256": "eefc40c7350f926e316422a3bb3e00d6fbb06f558bbcdfb99810a40f332f86eb",
+  "report": "evaluation/reports/ifrs16_serviced_office_results.json",
+  "report_sha256": "28ef78244eb3579f52b9321730519fe2a0e74ea08e133bf9c79a2817fd1e2b19",
+  "generated_at": "2026-10-22T12:44:40.085742+00:00",
+  "metric_count": 15,
+  "complete": true,
+  "passed": false
+}

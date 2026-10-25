@@ -1,0 +1,8 @@
+{
+  "source_prompt_id": "IFRS-20261022-C60500E7",
+  "question_sha256": "91722591112b847662fa09322e714967851bfc4030a121df0fdab9caa87f6c1d",
+  "actual_output_sha256": "dbec3b85f26cf8fbdc97398308c574e9f58138124d4f34f41cb24039db3778db",
+  "question_characters": 11497,
+  "actual_output_characters": 21456,
+  "source_kind": "Matching original local conversation; Markdown retained rather than rendered-text transcription"
+}
